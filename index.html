@@ -6,14 +6,39 @@
     <title>Van Ons digitaal klantenportaal</title>
 
     <link rel="stylesheet" href="./styles.css"/>
-    <link rel="stylesheet" href="https://fontawesome.com/">
-
+    <script src="scripts.js"></script>
 </head>
 <body>
     <header>
-       <img class="logo" src="./Van Ons Assets/Logo/Logo - VO white.png" alt="Van Ons logo">
-       <button><i class="fa-solid fa-bars"></i></button>
+            <img class="logo" src="./Van Ons Assets/Logo/Logo - VO white.png" alt="Van Ons logo">
+            <button class="hamburger"><img src="./images/bars-solid.svg" alt="hamburger icon"></button>
+            <!-- <button class="close-button"></button> -->
     </header>
+
+    <nav class="nav-menu">
+        <ul class="dropdown-menu"> 
+            <li class="nav-link">
+                <a href="">Home</a>
+            </li>
+
+            <li class="nav-link">
+                <a href="">Projecten</a>
+            </li>
+
+            <li class="nav-link">
+                <a href="">Contact</a>
+            </li>
+
+            <li class="nav-link">
+                <a href="">Account</a>
+            </li>
+
+            <li class="nav-link">
+                <a href="">Uitloggen</a>
+            </li>
+        </ul>
+        <!-- <img src="./Van Ons Assets/Mascotte/Cow.png" alt="Van Ons mascotte"> -->
+    </nav>
 
     <main>
         <section class="project">
@@ -21,7 +46,7 @@
             </div>
 
             <article class="project-information">  
-                <h2>VO Insight</h2>
+                <h1>VO Insight</h1>
                 <p>Projectomschrijving: Een digitaal klantenportaal...</p>
                 <!-- <p>Een digitaal klantenportaal waar klanten de voortgang van hun project bij Van Ons kunnen volgen.</p> -->
                 <p>Contactpersoon: ...</p>
@@ -35,48 +60,57 @@
 
             <ul class="process">
                 <li class="phase">
-                    <img src="./images/opzet.png">
+                    <img src="./images/opzet.png" alt="icon-image">
                     <div class="text">
                         <h3>De opzet fase</h3>
                         <p>Hier uploadt je de benodigde gegevens die van belang zijn voor het maken van het product.</p>
-                        <button class="button-phase">Bekijk de voortgang</button>
+                        <button class="button-phase">Bekijk de voortgang
+                            <a href=""></a>
+                        </button>
                     </div>
                 </li>
 
                 <li class="phase">
-                    <img src="./images/design.png">
+                    <img src="./images/design.png" alt="icon-image">
                     <div class="text">
                         <h3>De design fase</h3>
                         <p>Hier vindt je de voortgang van de design fase.</p>
-                        <button class="button-phase">Bekijk de voortgang</button>
+                        <button class="button-phase">Bekijk de voortgang
+                            <a href=""></a>
+                        </button>
                     </div>                         
                 </li>
 
                 <li class="phase">
-                    <img src="./images/development.png">
+                    <img src="./images/development.png" alt="icon-image">
                     <div class="text">
                         <h3>De development fase</h3>
                         <p>Tijd om het product te bouwen. In deze fase kun je zien hoeveel tickets er nog open staan.</p>
-                        <button class="button-phase">Bekijk de voortgang</button>
+                        <button class="button-phase">Bekijk de voortgang
+                            <a href=""></a>
+                        </button>
                     </div>
                 </li>
 
                 <li class="phase">
-                    <img src="./images/test.png">
+                    <img src="./images/test.png" alt="icon-image">
                     <div class="text">
                         <h3>De test fase</h3>
                         <p>Het product is bijna af. Tijd om het product te testen.</p>
-                        <button class="button-phase">Bekijk de voortgang</button>
-                    </div>
-                    
+                        <button class="button-phase">Bekijk de voortgang
+                            <a href=""></a>
+                        </button>
+                    </div> 
                 </li>
 
                 <li class="phase">
-                    <img src="./images/launch.png">
+                    <img src="./images/launch.png" alt="icon-image">
                     <div class="text">
                         <h3>De lancering</h3>
                         <p>De feedback is verwerkt. Het product is klaar om gelanceerd te worden.</p>
-                        <button class="button-phase">Bekijk de voortgang</button>
+                        <button class="button-phase">Bekijk de voortgang
+                            <a href=""></a>
+                        </button>
                     </div>
                 </li>
             </ul>

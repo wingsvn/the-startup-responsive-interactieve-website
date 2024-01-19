@@ -1,21 +1,26 @@
 @font-face {
     font-family: MarkProBold;
-    src: url(./Fonts/Mark\ Pro\ Bold.otf)
+    src: url(./Fonts/MarkProBold.otf)
 }
 
 @font-face {
     font-family: MarkProHeavy;
-    src: url(./Fonts/Mark\ Pro\ Heavy.otf.otf)
+    src: url(./Fonts/MarkProHeavy.otf.otf)
 }
 
 @font-face {
     font-family: MarkProRegular;
-    src: url(./Fonts/Mark\ Pro\ Regular.otf.otf)
+    src: url(./Fonts/MarkProRegular.otf)
 }
 
 @font-face {
-    font-family: Inter;
+    font-family: InterRegular;
     src: url(./Fonts/Inter/Inter-Regular.ttf)
+}
+
+@font-face {
+    font-family: InterBold;
+    src: url(./Fonts/Inter/Inter-Bold.ttf)
 }
 
 :root {
@@ -24,62 +29,101 @@
     --green-accent: #02c758; 
     --grey-color: #f2f2f2;
     --text-color: #000;
-
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
+}
 
- body {
+body {
     background-color: var(--body-color);
     height: 100vh;
-    font-family: Inter, Helvetica, sans-serif;
+    font-family: MarkProRegular, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.75rem;
- }
+}
 
- header {
+header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    /* height: 5rem; */
     z-index: 100;
     background-color: var(--blue-accent); 
     border-bottom-left-radius: 2rem;
     display: flex;
     justify-content: space-between;
- }
+    align-items: center;
+}
 
  img.logo {
-    display: flex;
     width: 5rem;
     height: auto;
     margin: 1.25rem;
+}
+
+.hamburger {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--body-color);
+}
+
+button.hamburger:hover {
+    
+}
+
+nav.nav-menu {
+    display: flex;
+    justify-content: center;
+    width:100vw; 
+    height: 100vh;
+    border-bottom-left-radius: 2rem;
+    background-color: var(--blue-accent);
+    margin-top: -42rem; /* om de nav te verbergen  */
  }
 
- .button-menu {
+.nav-menu.active {
+    margin-top: 0; 
+}
 
+ul.dropdown-menu {
+    margin-top: 10rem; /* zodat de linkjes van onder de header tevoorschijn komen */
  }
 
- main {
-    /* position: absolute; */
+li.nav-link {
+    padding: 1rem; /*voor spacing tussen de links*/
+    list-style: none;
+    font-family: MarkProBold;
+    font-size: 1.5rem;
+}
+
+li a {
+    color: var(--body-color);
+    text-decoration: none;
+} 
+
+/* nav img {
+    width: 2rem;
+    height: 2rem;
+} */
+
+main {
     margin: 1rem;
-    /* height: 100vh; */
- }
+}
 
 /* sectie 1 */
- section.project {
+section.project {
     position:relative;
-    /* background: lightblue; */
     height: 21rem; /* dit is nodig omdat de div in de section position absolute zijn  */
     margin-top: 7rem; /* dit is nodig omdat de nav position: fixed is .. */
- }
+}
 
- div.background {
+div.background {
     position: absolute;
     top: 1rem;
     left: 0;
@@ -87,9 +131,9 @@
     height: 11rem;
     background-color: var(--green-accent);
     border-radius: 0.5rem;
- }
+}
 
- article.project-information {
+article.project-information {
     position: absolute;
     top: 6rem;
     left: 4rem;
@@ -98,26 +142,30 @@
     padding: 1rem;
     background-color: var(--grey-color);
     border-radius: 0.5rem;
- }
+}
+
+h1 {
+    font-family: MarkProBold, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
 /* sectie 2 */
- section.project-process {
-    /* position: absolute; */
-    /* background: rgb(185, 239, 191); */
- }
+section.project-process {
+}
 
- h2 {
+h2 {
     font-family: MarkProBold, Helvetica, sans-serif;
- }
+}
 
- ul.process {
+ul.process {
     /* width: 20rem; */
     list-style: none;
     display: flex;
     flex-direction: column;
- }
+}
 
- li.phase {
+li.phase {
     display: flex;
     align-items: center;
     margin-top: 2rem;
@@ -126,24 +174,24 @@
     height: 10rem;
     border-radius: 0.5rem; */
     /* background: rgb(202, 209, 245);  */
- }
+}
 
- li img {
+li img {
     width: 5rem;
     height: 5rem;
     margin-bottom: 4rem; /*om de afbeelding op dezelfde hoogte te zetten als het subkopje.*/
- }
+}
 
- div.text {
+div.text {
     margin-left: 1rem;
- }
+}
 
- h3 {
-    font-family: MarkProRegular, Helvetica, sans-serif;
+h3 {
+    font-family: MarkProBold, Helvetica, sans-serif;
     /* line-height: 1.5rem; */
- }
+}
 
- .button-phase {
+.button-phase {
     width: max-content;
     height: 3rem;
     margin-top: 0.5rem;
@@ -155,13 +203,13 @@
     border-bottom-right-radius: 0.2rem;
     background-color: var(--body-color);
     border-color: var(--blue-accent);
-    font-family: Inter, Helvetica, sans-serif;
- }
+    font-family: MarkProRegular, Helvetica, sans-serif;
+}
 
- .button-phase:hover {
+.button-phase:hover {
     background-color: var(--blue-accent);
     color: var(--body-color);
- }
+}
 
 footer {
     width: 100vw;
@@ -173,9 +221,23 @@ footer {
     border-top-right-radius: 2rem;
 }
 
- footer img {
+footer img {
     /* position: absolute; */
     bottom: 0;
     width: 2rem;
     height: 2rem;
- }
+}
+
+
+/* media queries */
+
+/* @media screen and (min-width: 30rem) {
+    div.background {
+        width: 20rem;
+    }
+
+    article.project-information {
+        width: 30rem;
+    }
+} */
+

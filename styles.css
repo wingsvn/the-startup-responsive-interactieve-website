@@ -58,7 +58,7 @@ header {
     align-items: center;
 }
 
- img.logo {
+img.logo {
     width: 5rem;
     height: auto;
     margin: 1.25rem;
@@ -71,10 +71,11 @@ button.hamburger {
     border: none;
     border-radius: 2rem;
     background-color: var(--body-color);
+    cursor: pointer;
 }
 
 button.hamburger:hover {
-    
+    font-size: 1.50rem;
 }
 
 nav.nav-menu {
@@ -87,13 +88,22 @@ nav.nav-menu {
     margin-top: -42rem; /* om de nav te verbergen  */
  }
 
-.nav-menu.active {
+nav.nav-menu.active {
     margin-top: 0rem; 
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in;
 }
 
-ul.dropdown-menu {
+nav.nav-menu.close {
+    margin-top: 0rem; 
+    transition-duration: 0.75s;
+    transition-timing-function: ease-in;
+}
+
+ul.nav-dropdown {
     margin-top: 10rem; /* zodat de linkjes van onder de header tevoorschijn komen */
- }
+    position: absolute;
+}
 
 li.nav-link {
     padding: 1rem; /*voor spacing tussen de links*/
@@ -107,33 +117,31 @@ li a {
     text-decoration: none;
 } 
 
-/* nav img {
-    width: 2rem;
-    height: 2rem;
-} */
-
 main {
     margin: 1rem;
 }
 
 /* sectie 1 */
-section.project {
-    position:relative;
+section.main__project-information {
+    /* width: 31rem; */ /* footer neemt niet de breedte van de hele pagina in met deze width */
+    position: relative;
     height: 21rem; /* dit is nodig omdat de div in de section position absolute zijn  */
+    margin: 0 auto;
     margin-top: 7rem; /* dit is nodig omdat de nav position: fixed is .. */
 }
 
-div.background {
+div.project-background {
     position: absolute;
     top: 1rem;
     left: 0;
     width: 14rem;
     height: 11rem;
+    margin: 0 auto;
     background-color: var(--green-accent);
     border-radius: 0.5rem;
 }
 
-article.project-information {
+article.project-description {
     position: absolute;
     top: 6rem;
     left: 4rem;
@@ -150,30 +158,22 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* sectie 2 */
-section.project-process {
-}
-
+/* 5 fases*/
 h2 {
     font-family: MarkProBold, Helvetica, sans-serif;
 }
 
 ul.process {
-    /* width: 20rem; */
     list-style: none;
-    display: flex;
-    flex-direction: column;
+
 }
 
 li.phase {
     display: flex;
     align-items: center;
+    max-width: 21rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    /* background-color: var(--grey-color);
-    height: 10rem;
-    border-radius: 0.5rem; */
-    /* background: rgb(202, 209, 245);  */
 }
 
 li img {
@@ -188,15 +188,12 @@ div.text {
 
 h3 {
     font-family: MarkProBold, Helvetica, sans-serif;
-    /* line-height: 1.5rem; */
 }
 
 .button-phase {
     width: max-content;
     height: 3rem;
     margin-top: 0.5rem;
-    /* margin-left: 10rem; */
-    /* float: right; */
     padding: 1rem;
     border: solid;
     border-radius: 1rem;
@@ -216,28 +213,43 @@ footer {
     height: 4rem;
     background-color: var(--text-color);
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     border-top-right-radius: 2rem;
 }
 
 footer img {
-    /* position: absolute; */
-    bottom: 0;
     width: 2rem;
     height: 2rem;
 }
 
-
 /* media queries */
-
-/* @media screen and (min-width: 30rem) {
-    div.background {
-        width: 20rem;
+@media screen and (min-width: 40rem) {
+    div.project-background {
+        width: 25rem;
+        margin-left: 12rem;
     }
 
-    article.project-information {
-        width: 30rem;
+    article.project-description {
+        width: 35rem;
+        margin-left: 12rem;
     }
-} */
+   
+    li.phase {
+        display: inline-flex; /* om de items in kolommen naast elkaar te zetten */
+        margin-left: 6rem; /* voor ruimte tussen de kolommen */
+    }
+} 
+
+@media screen and (min-width: 65rem) {
+    div.project-background {
+        margin-left: 25rem;
+    }
+
+    article.project-description {
+        margin-left: 25rem;
+    }
+}
+
+
 

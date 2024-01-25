@@ -7,4 +7,5 @@ const nav = document.querySelector('.nav-menu')
 hamburger.addEventListener("click", function(event) { //hier voeg ik een event toe aan het element en koppel ik de actie die moet plaatsvinden
 //console.log("click")
     nav.classList.toggle('active') // hiermee komt de navigatie-links te voorschijn
-})
+    
+}) 
